@@ -16,14 +16,14 @@ for (let i = 0; i < thumbs.length; i++) {
 
 function changeImg() {
     if (this.getAttribute("id") === "left") { // hvis vi har klikket på venstrepilen
-        if (index > 1) {
+        if (index > thumbs.length) {
             index--;
         } else {
             index = 6;
         }
 
     } else { // hvis vi har klikket på højrepilen
-        if (index < 6) {
+        if (index < thumbs.length - 1) {
             index++;
         } else {
             index = 1;
@@ -47,14 +47,14 @@ document.onkeydown = function(event) {
 
     if (event.code === "ArrowLeft") { // der er klikket på 'venstre-pilen'
         // din kode her...
-        if (index > 1) {
+        if (index > thumbs.length) {
             index--;
         } else {
             index = 6;
         }
     } else if (event.code === "ArrowRight") { // der er klikket på højre-pilen'
         // din kode her...
-        if (index < 6) {
+        if (index < thumbs.length - 1) {
             index++;
         } else {
             index = 1;
